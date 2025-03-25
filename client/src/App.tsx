@@ -16,6 +16,9 @@ import '@xyflow/react/dist/style.css';
 import { initialNodes, nodeTypes } from './nodes';
 import { initialEdges, edgeTypes } from './edges';
 import Navigation from './components/Navigation';
+import { ThemeProvider } from './stores/ThemeContext';
+import ThemeButton from './components/ThemeButton';
+import { useTheme } from './stores/ThemeContext';
 
 export default function App() {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -25,9 +28,12 @@ export default function App() {
     [setEdges]
   );
 
+  const { darkMode } = useTheme();
+
   return (
       <div className="d-flex flex-column vh-100">
         <Navigation />
+        <ThemeButton />
         <div className="flex-grow-1 reactflow-container">
           <ReactFlow 
             nodes={nodes}
@@ -39,13 +45,16 @@ export default function App() {
             onConnect={onConnect}
             fitView
           >
-            <Background color="#1f2937" gap={10} variant={BackgroundVariant.Lines}/>
+            <Background 
+            color={darkMode ? "#636363" : "#c0c0c0"} 
+            gap={10} 
+            variant={BackgroundVariant.Dots} 
+          />
             
             <MiniMap />
             <Controls />
           </ReactFlow>
       </div>
     </div>
-    
   );
 }

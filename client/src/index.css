@@ -11,6 +11,11 @@ body,
   margin: 0;
 }
 
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .reactflow-container {
-  background-color: #030712; /* Light grey background */
+  transition: background-color 0.3s ease;
 }
