@@ -2,7 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import './navigation.css'; // Import custom CSS for additional styling
+import './Navigation.css'; // Import custom CSS for additional styling
 
 const Navigation = () => {
     return (
