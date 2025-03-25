@@ -10,3 +10,7 @@ body,
   height: 100%;
   margin: 0;
 }
+
+.reactflow-container {
+  background-color: #030712; /* Light grey background */
+}
