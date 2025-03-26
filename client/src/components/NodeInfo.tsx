@@ -3,7 +3,7 @@ import { Node } from '@xyflow/react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-interface NodePropertiesProps {
+interface NodeInfoProps {
   selectedNode: Node | null;
   isOpen: boolean;
   onClose: () => void;
@@ -11,7 +11,7 @@ interface NodePropertiesProps {
   className?: string;
 }
 
-const NodeProperties: React.FC<NodePropertiesProps> = ({
+const NodeInfo: React.FC<NodeInfoProps> = ({
   selectedNode,
   isOpen,
   onClose,
@@ -38,7 +38,7 @@ const NodeProperties: React.FC<NodePropertiesProps> = ({
             padding: '20px',
           }}>
             <Card.Body>
-              <Card.Title>Node Properties</Card.Title>
+              <Card.Title>Node Info</Card.Title>
               {selectedNode ? (
                 <>
                   <Card.Text>
@@ -60,4 +60,4 @@ const NodeProperties: React.FC<NodePropertiesProps> = ({
       );
     };
 
-export default NodeProperties;
+export default NodeInfo;

@@ -1,4 +1,4 @@
-.theme-toggle-button {
+.edit-toggle-button {
     width: 150px;
     height: 40px;
     z-index: 1050;
@@ -12,6 +12,6 @@
     transition: background-color 0.3s ease, color 0.3s ease;
   }
   
-  .theme-toggle-button:hover {
+  .edit-toggle-button:hover {
     background-color: #0056b3;
   }

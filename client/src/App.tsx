@@ -12,6 +12,9 @@ import {
   type OnConnect,
 } from '@xyflow/react';
 
+import Stack from 'react-bootstrap/Stack';
+
+
 import '@xyflow/react/dist/style.css';
 
 import { initialNodes, nodeTypes } from './nodes';
@@ -20,6 +23,8 @@ import Navigation from './components/Navigation';
 import ThemeButton from './components/ThemeButton';
 import { useTheme } from './stores/ThemeContext';
 import NodeInfo from './components/NodeInfo';
+import EditButton from './components/EditButton';
+import { useMode } from './stores/EditModeConstext';
 
 export default function App() {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -33,6 +38,7 @@ export default function App() {
   );
 
   const { darkMode } = useTheme();
+  const { editMode } = useMode()
 
   // Handle node click
   const onNodeClick = (_: React.MouseEvent, node: Node) => {
@@ -47,19 +53,26 @@ export default function App() {
   };
 
   return (
+    
+    <div className="vh-100 w-100 d-flex flex-row">
+      
+        
+      {editMode && <div className='flex-grow-1' style={{flex: 1}}><h1>Edit mode</h1></div>}
 
-    <div className="vh-100 w-100 ">
+      <div className='flex-grow-3' style={{flex: 3}}>
         <Navigation />
-        <ThemeButton />
-        {( isMenuOpen &&
-        <NodeInfo
-          selectedNode={selectNode}
-          isOpen={isMenuOpen}
-          onClose={closeMenu}
-          darkMode={darkMode}
-        />
-      )}
-
+          <Stack gap={2} className="position-absolute top-1 end-0 m-3">
+            <ThemeButton />
+            <EditButton />
+          </Stack>
+          {( isMenuOpen &&
+          <NodeInfo
+            selectedNode={selectNode}
+            isOpen={isMenuOpen}
+            onClose={closeMenu}
+            darkMode={darkMode}
+          />
+        )}
         <ReactFlow
           nodes={nodes}
           nodeTypes={nodeTypes}
@@ -83,8 +96,8 @@ export default function App() {
             }}
           />
         </ReactFlow>
-
       </div>
+    </div>
    
     
   );
