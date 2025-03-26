@@ -19,7 +19,7 @@ import { initialEdges, edgeTypes } from './edges';
 import Navigation from './components/Navigation';
 import ThemeButton from './components/ThemeButton';
 import { useTheme } from './stores/ThemeContext';
-import NodeProperties from './components/NodeProperties';
+import NodeInfo from './components/NodeInfo';
 
 export default function App() {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -52,7 +52,7 @@ export default function App() {
         <Navigation />
         <ThemeButton />
         {( isMenuOpen &&
-        <NodeProperties
+        <NodeInfo
           selectedNode={selectNode}
           isOpen={isMenuOpen}
           onClose={closeMenu}
