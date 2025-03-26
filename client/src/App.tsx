@@ -16,7 +16,6 @@ import '@xyflow/react/dist/style.css';
 import { initialNodes, nodeTypes } from './nodes';
 import { initialEdges, edgeTypes } from './edges';
 import Navigation from './components/Navigation';
-import { ThemeProvider } from './stores/ThemeContext';
 import ThemeButton from './components/ThemeButton';
 import { useTheme } from './stores/ThemeContext';
 
