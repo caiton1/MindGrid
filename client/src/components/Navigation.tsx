@@ -2,13 +2,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import './Navigation.css'; // Import custom CSS for additional styling
+import './Navigation.css'; 
 
 const Navigation = () => {
     return (
         <Navbar 
           expand="lg" 
-          className="bg-primary position-absolute top-0 start-50 translate-middle-x rounded shadow p-3 mt-3"
+          className="bg-primary position-absolute top-0 start-50 translate-middle-x rounded shadow p-3 mt-3 flex-nowrap"
         >
           <Container>
             <Navbar.Brand href="#home">MindGrid</Navbar.Brand>

@@ -1,5 +1,5 @@
 .navbar {
-    z-index: 1050; /* Ensure it stays above other elements */
-    width: 40%; /* Adjust width to make it look more like a floating bar */
-    max-width: 1200px; /* Optional: Limit the maximum width */
+    z-index: 1050;
+    width: 40%; 
+    max-width: 1200px; 
   }

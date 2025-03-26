@@ -19,3 +19,12 @@ body {
 .reactflow-container {
   transition: background-color 0.3s ease;
 }
+
+
+.navigation-bar {
+  transition: padding-right 0.3s ease;
+}
+
+.reactflow-container {
+  transition: margin-left 0.3s ease;
+}
