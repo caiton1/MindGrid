@@ -52,7 +52,11 @@ export default function App() {
           />
             
             <MiniMap />
-            <Controls />
+            <Controls 
+              style={{
+                color: '#000000'
+              }}
+            />
           </ReactFlow>
       </div>
     </div>
