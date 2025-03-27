@@ -25,6 +25,7 @@ import { useTheme } from './stores/ThemeContext';
 import NodeInfo from './components/NodeInfo';
 import EditButton from './components/EditButton';
 import { useMode } from './stores/EditModeConstext';
+import EditOverlay from './components/EditOverlay';
 
 export default function App() {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
@@ -53,11 +54,13 @@ export default function App() {
   };
 
   return (
-    
     <div className="vh-100 w-100 d-flex flex-row">
-      
         
-      {editMode && <div className='flex-grow-1' style={{flex: 1}}><h1>Edit mode</h1></div>}
+      {editMode && <div className='flex-grow-1' style={{flex: 1}}><EditOverlay 
+        selectedNode={selectNode}
+        editMode={editMode}
+        darkMode={darkMode}
+        /></div>}
 
       <div className='flex-grow-3' style={{flex: 3}}>
         <Navigation />
@@ -77,7 +80,7 @@ export default function App() {
           nodes={nodes}
           nodeTypes={nodeTypes}
           onNodesChange={onNodesChange}
-          onNodeClick={onNodeClick} // Handle node click
+          onNodeClick={onNodeClick} 
           edges={edges}
           edgeTypes={edgeTypes}
           onEdgesChange={onEdgesChange}
