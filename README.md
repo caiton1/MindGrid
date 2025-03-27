@@ -21,6 +21,9 @@ Can set goals and milestones in each node
 
 ### Website Deployment
 - Github: https://caiton1.github.io/MindGrid/
-- AWS (coming soon)
+- AWS S3 (coming soon)
+
+### Backend Deployment (allows for collaborative/shared workspace)
+- AWS API gateway + EKS (websocket enabled) + NoSQL (coming soon)
 
 Note: I am currently working on a good front end/client side web application, then will create a infrastructure and the option to connect it to one after. 
