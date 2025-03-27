@@ -25,16 +25,16 @@ const NodeInfo: React.FC<NodeInfoProps> = ({
           
         >
           <Card style={{
-            position: 'fixed', // Fixed position to stay on the right side of the screen
-            top: '12%',
+            position: 'fixed', 
+            top: '25%',
             right: '1%',
-            width: '300px', // Fixed width for the menu
-            height: 'auto', // Full height of the viewport
-            backgroundColor: darkMode ? '#333333' : '#ffffff', // Dynamic background color
-            color: darkMode ? '#ffffff' : '#000000', // Dynamic text color
-            zIndex: 1050, // Ensure it appears above ReactFlow
-            boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', // Add a shadow for better visibility
-            overflowY: 'auto', // Allow scrolling if content overflows
+            width: '300px', 
+            height: 'auto', 
+            backgroundColor: darkMode ? '#333333' : '#ffffff', 
+            color: darkMode ? '#ffffff' : '#000000',
+            zIndex: 1050, 
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)',
+            overflowY: 'auto',
             padding: '20px',
           }}>
             <Card.Body>
